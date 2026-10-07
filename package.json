@@ -1,0 +1,14 @@
+{
+  "name": "student-management-crud-app",
+  "version": "1.0.0",
+  "description": "Beginner-friendly CRUD app with frontend, Express API, validation, and persistent SQLite database.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "sql.js": "^1.13.0"
+  }
+}

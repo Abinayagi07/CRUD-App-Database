@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <div class="eyebrow">CRUD + DATABASE PROJECT</div>
+      <h1>Student Management</h1>
+      <p>Add, view, update, and delete student records using an API and SQLite database.</p>
+    </header>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div>
+          <h2 id="formTitle">Add a student</h2>
+          <p>All fields are required.</p>
+        </div>
+      </div>
+      <form id="studentForm">
+        <div class="form-grid">
+          <label>Full name
+            <input id="name" name="name" type="text" minlength="2" maxlength="60" required placeholder="e.g. Priya Kumar">
+          </label>
+          <label>Email address
+            <input id="email" name="email" type="email" required placeholder="e.g. priya@example.com">
+          </label>
+          <label class="full">Department
+            <input id="department" name="department" type="text" minlength="2" maxlength="50" required placeholder="e.g. Computer Science">
+          </label>
+        </div>
+        <div class="actions">
+          <button id="submitButton" type="submit">Add student</button>
+          <button id="cancelButton" class="secondary hidden" type="button">Cancel edit</button>
+        </div>
+        <p id="message" class="message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="list-heading">
+        <div>
+          <h2>Student records</h2>
+          <p id="count">Loading records…</p>
+        </div>
+        <button id="refreshButton" class="secondary" type="button">Refresh</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>ID</th><th>Name</th><th>Email</th><th>Department</th><th>Actions</th></tr></thead>
+          <tbody id="studentRows">
+            <tr><td colspan="5" class="empty">Loading students…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <footer>Built with HTML, CSS, JavaScript, Express API, and SQLite.</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
